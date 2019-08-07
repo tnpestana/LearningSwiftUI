@@ -11,15 +11,20 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack(alignment: .center, spacing: 16) {
+            Image("paint")
+                .resizable()
+                .clipShape(Circle())
+                .overlay(Circle().stroke(Color.white, lineWidth: 4))
+                .shadow(radius: 10)
             Text("Hello Pesto")
-                .foregroundColor(.orange)
+                .foregroundColor(.yellow)
                 .font(.title)
             HStack(alignment: .center, spacing: 32) {
                 Text("How ya doin?")
-                    .foregroundColor(.pink)
+                    .foregroundColor(.black)
                     .font(.body)
                 Text("Good I hope")
-                    .foregroundColor(.green)
+                    .foregroundColor(.yellow)
                     .font(.footnote)
             }
         }
