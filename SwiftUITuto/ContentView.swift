@@ -10,25 +10,33 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .center, spacing: 16) {
-            Image("paint")
-                .resizable()
-                .clipShape(Circle())
-                .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                .shadow(radius: 10)
-            Text("Hello Pesto")
-                .foregroundColor(.yellow)
-                .font(.title)
-            HStack(alignment: .center, spacing: 32) {
-                Text("How ya doin?")
+        VStack {
+            MapView()
+                .edgesIgnoringSafeArea(.top)
+                .frame(height: 300)
+            
+            CircleImage()
+                .offset(y: -130)
+                .padding(.bottom, -130)
+            
+            VStack(alignment: .center, spacing: 16) {
+                Text("Hello Pesto")
                     .foregroundColor(.black)
-                    .font(.body)
-                Text("Good I hope")
-                    .foregroundColor(.yellow)
-                    .font(.footnote)
+                    .font(.title)
+                HStack(alignment: .center, spacing: 32) {
+                    Text("How ya doin?")
+                        .foregroundColor(.black)
+                        .font(.body)
+                    Text("Good I hope")
+                        .foregroundColor(.black)
+                        .font(.footnote)
+                }
             }
+            .padding()
+            //.background(Color.blue.edgesIgnoringSafeArea(.all))
+            
+            Spacer()
         }
-        .padding()
     }
 }
 

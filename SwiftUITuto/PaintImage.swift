@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PaintImage: View {
     var body: some View {
-        Image("paint")
+        Image("image")
             .clipShape(Circle())
     }
 }
