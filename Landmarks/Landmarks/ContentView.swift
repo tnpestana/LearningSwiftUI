@@ -23,10 +23,9 @@ struct ContentView: View {
                 Text("8inho")
                     .font(.title)
                 HStack {
-                    Text("Alfornelos")
+                    Text("R. Capitães de Abril, n.º 39, 8.º Esq., 2650-351")
                         .font(.subheadline)
-                    Spacer()
-                    Text("Amadora")
+                    Text("Alfornelos, Amadora")
                         .font(.subheadline)
                 }
             }
